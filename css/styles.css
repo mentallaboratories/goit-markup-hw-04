@@ -139,16 +139,40 @@ body{
     letter-spacing: 0.02em;
     color: var(--link-text-color);
 }
+
 .current {
     color: var(--accent-color);
 }
+
 .nav-link:hover,
 .nav-link:focus{
     color: var(--accent-color);
 }
+
 .contacts-link{
     color: var(--plain-text-color);
 }
+
+.contacts-link::before{
+    content:"";
+    display: inline-block;
+    margin-right: 10px;
+    height: 16px;
+    width: 16px;
+
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-envelope::before{
+    background-image: url(../images/icon-envelope.svg);
+}
+
+.icon-smartphone::before{
+    background-image: url(../images/icon-smartphone.svg);
+}
+
 .contacts-link:hover,
 .contacts-link:focus {
     color: var(--accent-color);
@@ -157,7 +181,20 @@ body{
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .hero{
     padding: 200px 0;
-    background-color: var(--section-background-color);
+    margin: 0 auto;
+
+    max-width: 1600px;
+    height: 600px;
+
+    background-repeat: no-repeat;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    ),
+     url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-title{
@@ -201,6 +238,34 @@ body{
 .features-item{
     width: calc((100%-90px)/4);
 }
+
+.features-item::before{
+    content: "";
+    display: block;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: #F5F4FA;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-antenna::before{
+    background-image: url(../images/icon-antenna.svg);
+}
+
+.icon-clock::before{
+    background-image: url(../images/icon-clock.svg);
+}
+
+.icon-diagram::before{
+    background-image: url(../images/icon-diagram.svg);
+}
+
+.icon-astronaut::before{
+    background-image: url(../images/icon-astronaut.svg);
+}
+
 .features-title{
     font-size: 14px;
     line-height: 1.15;
@@ -262,7 +327,24 @@ body{
 .team-member-position{
     font-size: 16px;
     line-height: 1.19;
+
+    display: block;
+    margin-bottom: 16px;
 }
+
+.social-list{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.social-list-item{
+    border-radius: 50%;
+    background-color: red;
+    max-width: 44px;
+}
+
+
 /* !!!-------------footer-----------!!!! */
 .footer{
     background-color:var(--section-background-color);
