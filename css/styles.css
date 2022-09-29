@@ -8,6 +8,7 @@
     --accent-color:#2196F3;
     --footer-contacts-color:rgba(255, 255, 255, 0.6);
     --section-background-color:#2F303A;
+    --icon-default-color:#AFB1B8;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!! RESET CSS !!!!!!!!!!!!!!!!!!!!!!*/
@@ -149,34 +150,32 @@ body{
     color: var(--accent-color);
 }
 
+.contacts-item{
+   
+}
+
 .contacts-link{
-    color: var(--plain-text-color);
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--plain-text-color);  
 }
 
-.contacts-link::before{
-    content:"";
-    display: inline-block;
-    margin-right: 10px;
-    height: 16px;
-    width: 16px;
-
-    background-size:auto;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.icon-envelope::before{
-    background-image: url(../images/icon-envelope.svg);
-}
-
-.icon-smartphone::before{
-    background-image: url(../images/icon-smartphone.svg);
+.contacts-icon{
+    fill:var(--plain-text-color);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
     color: var(--accent-color);
 }
+
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
+    fill: var(--accent-color);
+}
+
+
 /* !!!!!!---------hero-----------!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .hero{
@@ -243,6 +242,7 @@ body{
     content: "";
     display: block;
     margin-bottom: 30px;
+    width: 100%;
     height: 120px;
     background-color: #F5F4FA;
     background-size: auto;
@@ -251,19 +251,19 @@ body{
 }
 
 .icon-antenna::before{
-    background-image: url(../images/icon-antenna.svg);
+    background-image: url(../images/icon-features-antenna.svg);
 }
 
 .icon-clock::before{
-    background-image: url(../images/icon-clock.svg);
+    background-image: url(../images/icon-features-clock.svg);
 }
 
 .icon-diagram::before{
-    background-image: url(../images/icon-diagram.svg);
+    background-image: url(../images/icon-features-diagram.svg);
 }
 
 .icon-astronaut::before{
-    background-image: url(../images/icon-astronaut.svg);
+    background-image: url(../images/icon-features-astronaut.svg);
 }
 
 .features-title{
@@ -332,6 +332,8 @@ body{
     margin-bottom: 16px;
 }
 
+/* -----social-list sprites menu -----*/
+
 .social-list{
     display:flex;
     justify-content: center;
@@ -339,9 +341,72 @@ body{
 }
 
 .social-list-item{
+    width: 44px;
+    height: 44px;
+}
+
+
+.social-list-link{
     border-radius: 50%;
-    background-color: red;
-    max-width: 44px;
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list-link:hover, .social-list-link:focus{
+    background-color: var(--accent-color);
+}
+
+.social-list-icon{
+    fill: var(--icon-default-color);
+}
+
+.social-list-link:hover .social-list-icon, 
+.social-list-link:focus .social-list-icon{
+    fill: var(--background-color);
+}
+
+
+/* !!!!!!!!!!!!!   OUR  CLIENTS   !!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.client-list{
+    justify-items: center;
+}
+
+.client-list-item{
+    width: 170px;
+    height: 92px;
+}
+
+.client-list-link{
+    width: 100%;
+    height: 100%;
+
+    background-color:var(--background-color);
+    border: 1px solid var(--icon-default-color);
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-list-link:hover, .client-list-link:focus{
+    border-color: var(--accent-color);
+}
+
+.client-list-icon{
+    fill:var(--icon-default-color)
+}
+
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon{
+    fill: var(--accent-color);
 }
 
 
