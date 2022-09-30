@@ -145,6 +145,14 @@ body{
     color: var(--accent-color);
 }
 
+.current .contacts-icon{
+    fill: var(--accent-color);
+}
+
+.current .contacts-text{
+    color: var(--accent-color);
+}
+
 .nav-link:hover,
 .nav-link:focus{
     color: var(--accent-color);
@@ -165,6 +173,7 @@ body{
     fill:var(--plain-text-color);
 }
 
+
 .contacts-link:hover,
 .contacts-link:focus {
     color: var(--accent-color);
@@ -174,6 +183,7 @@ body{
 .contacts-link:focus .contacts-icon {
     fill: var(--accent-color);
 }
+
 
 
 /* !!!!!!---------hero-----------!!!!!! 
@@ -362,12 +372,20 @@ body{
     background-color: var(--accent-color);
 }
 
-.social-list-icon{
+.team .social-list-icon{
     fill: var(--icon-default-color);
 }
 
 .social-list-link:hover .social-list-icon, 
 .social-list-link:focus .social-list-icon{
+    fill: var(--background-color);
+}
+
+.current .social-list-link{
+    background-color: var(--accent-color);
+}
+
+.current .social-list-icon{
     fill: var(--background-color);
 }
 
@@ -383,6 +401,8 @@ body{
     height: 92px;
 }
 
+
+
 .client-list-link{
     width: 100%;
     height: 100%;
@@ -394,6 +414,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.current .client-list-link{
+    border-color: var(--accent-color);
+}
+
+.current .client-list-icon {
+    fill: var(--accent-color)
 }
 
 .client-list-link:hover, .client-list-link:focus{
@@ -410,6 +438,7 @@ body{
 }
 
 
+
 /* !!!-------------footer-----------!!!! */
 .footer{
     background-color:var(--section-background-color);
@@ -424,9 +453,6 @@ body{
     align-items: baseline;
 }
 
-.footer-contacts, .footer-social-links{
-    
-}
 
 .footer .logo {
     color: var(--light-text-color);
@@ -459,7 +485,11 @@ body{
     color: var(--accent-color);
 }
 
+
+/* ------- FOOTER SOCIAL LINKS -------------- */
+
 .social-links-title{
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -468,23 +498,17 @@ body{
     margin-bottom: 20px;
 }
 
-.footer .social-list-link{
+
+.social-list-link{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .social-list-link:hover,
-.footer .social-list-link:focus
- {
-    background-color: var(--accent-color);
-}
 
 .footer .social-list-icon{
     fill:var(--background-color)
-}
+} 
 
-.social-list-item .active{
-    background-color: var(--accent-color);
-}
+
 /*!!!--------PORTFOLIO------------!!!*/
 
 .portfolio-filter{
@@ -515,7 +539,7 @@ body{
 
 }
 
-.active {
+.current .portfolio-filter-button {
     background-color: var(--accent-color);
     color: var(--light-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -545,7 +569,7 @@ body{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.chosen{
+.current .portfolio-card-link{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
