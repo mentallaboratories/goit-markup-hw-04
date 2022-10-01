@@ -145,14 +145,6 @@ body{
     color: var(--accent-color);
 }
 
-.current .contacts-icon{
-    fill: var(--accent-color);
-}
-
-.current .contacts-text{
-    color: var(--accent-color);
-}
-
 .nav-link:hover,
 .nav-link:focus{
     color: var(--accent-color);
@@ -381,13 +373,6 @@ body{
     fill: var(--background-color);
 }
 
-.current .social-list-link{
-    background-color: var(--accent-color);
-}
-
-.current .social-list-icon{
-    fill: var(--background-color);
-}
 
 
 /* !!!!!!!!!!!!!   OUR  CLIENTS   !!!!!!!!!!!!
